@@ -178,9 +178,6 @@ function isValid(formula){
   
 }
 
-
-
-
 // array Diff 
 /* INSTRUCTIONS
 Your goal in this kata is to implement a difference function, 
