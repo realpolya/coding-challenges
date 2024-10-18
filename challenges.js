@@ -620,7 +620,7 @@ mumble('121') //=> '1-22-111'
 mumble('!A 2') //=> '!-AA-   -2222'
 -----------------------------------------------------------------------------*/
 // Your solution for 13-mumble here:
-console.log("=======================mumble===========================");
+console.log("=======================13mumble===========================");
 
 function mumble(str) {
   let result = [];
@@ -668,10 +668,27 @@ fromPairs([ ['name', 'Sam"], ['age', 24], ['name', 'Sally'] ])
 //=> { name: "Sally", age: 24 }
 -----------------------------------------------------------------------------*/
 // Your solution for 14-fromPairs here:
+console.log("=======================14fromPairs===========================");
 
+const fromPairs = (array) => {
+  
+  let object = array.reduce((arg, subArray) => {
 
+    const [ key, value ] = subArray;
 
+    arg[key] = value;
 
+    return arg;
+
+  }, {});
+
+  console.log(object);
+  return object;
+
+}
+
+fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) ;
+fromPairs([ ['name', 'Sam'], ['age', 24], ['name', 'Sally'] ]);
 
 /*-----------------------------------------------------------------------------
 Challenge: 15-mergeObjects
