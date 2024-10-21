@@ -727,20 +727,20 @@ const mergeObjects = (...args) => {
 
   let object = args.reduce((arg, el) => {
 
-    TODO:
-    // const [ key, value ] = subArray;
+    Object.entries(el).forEach(([key, value]) => arg[key] = value);
+    return arg;
 
-    // arg[key] = value;
+  }, {});
 
-    // return arg;
-
-  }, args[0]);
-
+  console.log(object);
   return object;
 
 } 
 
+mergeObjects({}, {a: 1});
 mergeObjects({a: 1, b: 2, c: 3}, {d: 4});
+mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});
+mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44}, {love: 245, craze: 7});
 
 /*-----------------------------------------------------------------------------
 Challenge: 16-findHighestPriced
