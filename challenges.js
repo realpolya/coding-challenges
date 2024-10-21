@@ -716,10 +716,31 @@ mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44})
 //=> {a: 1, b: 22, c: 3, d: 44}
 -----------------------------------------------------------------------------*/
 // Your solution for 15-mergeObjects here:
+console.log("=======================15mergeObjects===========================");
 
+const mergeObjects = (...args) => {
 
+  if (args.length < 2) {
+    console.log('Not enough arguments, minimum 2');
+    return;
+  }
 
+  let object = args.reduce((arg, el) => {
 
+    TODO:
+    // const [ key, value ] = subArray;
+
+    // arg[key] = value;
+
+    // return arg;
+
+  }, args[0]);
+
+  return object;
+
+} 
+
+mergeObjects({a: 1, b: 2, c: 3}, {d: 4});
 
 /*-----------------------------------------------------------------------------
 Challenge: 16-findHighestPriced
