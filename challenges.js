@@ -138,7 +138,7 @@ function addList(...nums) {
   return sum;
 }
 
-console.log(addList(1, 4, 5, "run", 100));
+// console.log(addList(1, 4, 5, "run", 100));
 
 
 /*-----------------------------------------------------------------------------
@@ -190,9 +190,9 @@ const computeRemainder = (a, b) => {
 
 }
 
-console.log(computeRemainder(10,2)) //=> 0
-console.log(computeRemainder(4,0)) //=> Infinity
-console.log(computeRemainder(10.5, 3)) //=> 1.5
+// console.log(computeRemainder(10,2)) //=> 0
+// console.log(computeRemainder(4,0)) //=> Infinity
+// console.log(computeRemainder(10.5, 3)) //=> 1.5
 
 /*-----------------------------------------------------------------------------
 Challenge: 06-range
@@ -236,11 +236,11 @@ const range = (a, b) => {
   return newArray;
 }
 
-console.log(range(1,4));
-console.log(range(-2, 3));
-console.log(range(15,40));
-console.log(range(5,2));
-console.log(range("ok",2));
+// console.log(range(1,4));
+// console.log(range(-2, 3));
+// console.log(range(15,40));
+// console.log(range(5,2));
+// console.log(range("ok",2));
 
 /*-----------------------------------------------------------------------------
 Challenge: 07-reverseUpcaseString
@@ -284,9 +284,9 @@ const reverseUpcaseString = (words) => {
 
 }
 
-console.log(reverseUpcaseString("SEB Rocks!"));
-console.log(reverseUpcaseString("Loops and iteration"));
-console.log(reverseUpcaseString(3));
+// console.log(reverseUpcaseString("SEB Rocks!"));
+// console.log(reverseUpcaseString("Loops and iteration"));
+// console.log(reverseUpcaseString(3));
 
 /*-----------------------------------------------------------------------------
 Challenge: 08-removeEnds
@@ -326,9 +326,9 @@ const removeEnds = (words) => {
   return newArray.join('');
 }
 
-console.log(removeEnds('SEB Rocks!'));
-console.log(removeEnds('Loops and iteration'));
-console.log(removeEnds('a'));
+// console.log(removeEnds('SEB Rocks!'));
+// console.log(removeEnds('Loops and iteration'));
+// console.log(removeEnds('a'));
 
 
 /*-----------------------------------------------------------------------------
@@ -402,9 +402,9 @@ const charCount = a => {
   return result;
 }
 
-charCount("12333");
-charCount('Today is fantastic!');
-charCount('hello');
+// charCount("12333");
+// charCount('Today is fantastic!');
+// charCount('hello');
 
 /*-----------------------------------------------------------------------------
 Challenge: 10-formatWithPadding
@@ -455,9 +455,9 @@ const formatWithPadding = (a, str, b) => {
 
 }
 
-formatWithPadding(123, '0', 5);
-formatWithPadding(42, '*', 10);
-formatWithPadding(1234, '*', 3);
+// formatWithPadding(123, '0', 5);
+// formatWithPadding(42, '*', 10);
+// formatWithPadding(1234, '*', 3);
 
 /*-----------------------------------------------------------------------------
 Challenge: 11-isPalindrome
@@ -529,12 +529,12 @@ const isPalindrome = a => {
   return palindrome; 
 }
 
-console.log(isPalindrome('SEI Rocks'));
-console.log(isPalindrome('rotor'));
-console.log(isPalindrome('A nut for a jar of tuna'));
-console.log(isPalindrome('b'));
-console.log(isPalindrome("Madam, I'm Adam"));
-console.log(isPalindrome("A man, a plan, a canal—Panama,"));
+// console.log(isPalindrome('SEI Rocks'));
+// console.log(isPalindrome('rotor'));
+// console.log(isPalindrome('A nut for a jar of tuna'));
+// console.log(isPalindrome('b'));
+// console.log(isPalindrome("Madam, I'm Adam"));
+// console.log(isPalindrome("A man, a plan, a canal—Panama,"));
 
 
 /*-----------------------------------------------------------------------------
@@ -593,10 +593,10 @@ const hammingDistance = (a, b) => {
 }
 
 
-console.log(hammingDistance('abc', 'abc'))
-console.log(hammingDistance('a1c', 'a2c'))
-console.log(hammingDistance('!!!!', '****'))
-console.log(hammingDistance('abc', 'ab'))
+// console.log(hammingDistance('abc', 'abc'))
+// console.log(hammingDistance('a1c', 'a2c'))
+// console.log(hammingDistance('!!!!', '****'))
+// console.log(hammingDistance('abc', 'ab'))
 
 /*-----------------------------------------------------------------------------
 Challenge: 13-mumble
@@ -638,10 +638,10 @@ function mumble(str) {
   return result;
 }
 
-console.log(mumble('X'))
-console.log(mumble('abc'))
-console.log(mumble('121'))
-console.log(mumble('!A 2'))
+// console.log(mumble('X'))
+// console.log(mumble('abc'))
+// console.log(mumble('121'))
+// console.log(mumble('!A 2'))
 
 
 
@@ -687,8 +687,8 @@ const fromPairs = (array) => {
 
 }
 
-fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) ;
-fromPairs([ ['name', 'Sam'], ['age', 24], ['name', 'Sally'] ]);
+// fromPairs([ ['a', 1], ['b', 2], ['c', 3] ]) ;
+// fromPairs([ ['name', 'Sam'], ['age', 24], ['name', 'Sally'] ]);
 
 /*-----------------------------------------------------------------------------
 Challenge: 15-mergeObjects
@@ -737,10 +737,10 @@ const mergeObjects = (...args) => {
 
 } 
 
-mergeObjects({}, {a: 1});
-mergeObjects({a: 1, b: 2, c: 3}, {d: 4});
-mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});
-mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44}, {love: 245, craze: 7});
+// mergeObjects({}, {a: 1});
+// mergeObjects({a: 1, b: 2, c: 3}, {d: 4});
+// mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44});
+// mergeObjects({a: 1, b: 2, c: 3}, {d: 4}, {b: 22, d: 44}, {love: 245, craze: 7});
 
 /*-----------------------------------------------------------------------------
 Challenge: 16-findHighestPriced
@@ -779,10 +779,27 @@ findHighestPriced([
 //=> { sku: 'b2', price: 50 }
 -----------------------------------------------------------------------------*/
 // Your solution for 16-findHighestPriced here:
+console.log("=======================16findHighestPriced===========================");
 
+const findHighestPriced = (arr) => {
+  arr.sort((a, b) => b.price - a.price);
+  console.log(arr[0]);
+  return arr[0];
+}
 
+findHighestPriced([
+  { sku: 'a1', price: 25 },
+  { sku: 'b2', price: 5 },
+  { sku: 'c3', price: 50 },
+  { sku: 'd4', price: 10 }
+])
 
-
+findHighestPriced([
+  { sku: 'a1', price: 25 },
+  { sku: 'b2', price: 50 },
+  { sku: 'c3', price: 50 },
+  { sku: 'd4', price: 10 }
+])
 
 /*-----------------------------------------------------------------------------
 Challenge: 17-mapArray
