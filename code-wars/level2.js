@@ -51,3 +51,31 @@ function isPrime(num) {
     }
 
 }
+
+// Extract the domain name from a URL
+function domainName(url){
+
+    let arrayWww = url.split('www.')
+    let string;
+    
+    if (arrayWww.length === 1) {
+      string = url
+    } else {
+      string = arrayWww[1]
+    }
+  
+    let arraySlash = string.split('//');
+    
+    if (arraySlash.length !== 1) {
+      string = arraySlash[1]
+    } 
+    
+    let arrayDot = string.split('.');
+    
+    if (arrayDot.length !== 1) {
+      string = arrayDot[0]
+    }
+    
+    return string;
+    
+  }
