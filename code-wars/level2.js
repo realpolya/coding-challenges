@@ -78,4 +78,28 @@ function domainName(url){
     
     return string;
     
-  }
+}
+
+function validBraces(braces){
+  
+    const paren = ['(', ')']
+    const boxy = ['[', ']']
+    const curly = ['{', '}']
+    let open = []
+    let close = []
+    
+    braces.forEach(brace => {
+      if (brace === paren[0] || brace === boxy[0] || brace === curly[0]) {
+        open.push(brace)
+      } else {
+        close.push(brace)
+      }
+    })
+    
+    if (open.length != close.length) return false;
+    
+    for (let i = 0; i < open.length; i++) {
+      open[i]
+    }
+    
+}
