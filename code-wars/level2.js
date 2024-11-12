@@ -82,24 +82,64 @@ function domainName(url){
 
 function validBraces(braces){
   
-    const paren = ['(', ')']
-    const boxy = ['[', ']']
-    const curly = ['{', '}']
-    let open = []
-    let close = []
-    
-    braces.forEach(brace => {
-      if (brace === paren[0] || brace === boxy[0] || brace === curly[0]) {
-        open.push(brace)
-      } else {
-        close.push(brace)
-      }
-    })
-    
-    if (open.length != close.length) return false;
-    
-    for (let i = 0; i < open.length; i++) {
-      open[i]
+  const paren = ['(', ')']
+  const boxy = ['[', ']']
+  const curly = ['{', '}']
+  
+  let open = []
+  let close = []
+  
+  // populate open and close arrays
+  braces.split('').forEach(brace => {
+    if (brace === paren[0] || brace === boxy[0] || brace === curly[0]) {
+      open.push(brace)
+      close.push('x')
+    } else {
+      close.push(brace)
+      open.push('x')
     }
+  })
+  
+  // check if closing braces precede opening braces
+  let countOpen = 0
+  let countClose = 0
+  for (let i = 0; i < open.length; i++) {
+    if (open[i] === 'x') countOpen++;
+    if (close[i] === 'x') countClose++;
+    if (countOpen > countClose) return false;
+  }
+  
+  // split into chunks separated by 'x'
+  let openSplit = open.join('').split('x').filter(str => str != '')
+  let closeSplit = close.join('').split('x').filter(str => str != '')
+  
+  // is length of opening and closing the same?
+  if (openSplit.length != closeSplit.length) return false;
+  
+  // reverse open array
+  let openReverse = openSplit.map(str => str.split('').reverse().join(''))
+  
+  // replace characters in close array
+  let closeReplaced = closeSplit.map(str => {
     
+    let newStr = str.split('').map(char => {
+      let newChar;
+      if (paren.includes(char)) newChar = paren[0]
+      if (boxy.includes(char)) newChar = boxy[0]
+      if (curly.includes(char)) newChar = curly[0]
+      return newChar
+    }).join('')
+    
+    return newStr;
+    
+  })
+  
+  // compare reversed open array and replaced close array
+  for (let i = 0; i < openReverse.length; i++) {
+    if (openReverse[i] != closeReplaced[i]) return false;
+  }
+  
+  // if all checks pass, true
+  return true;
+  
 }
